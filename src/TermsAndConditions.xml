@@ -11,7 +11,9 @@
 >
     <name>Terms And Conditions</name>
     <description>A simple widget to display terms and conditions next to each other.</description>
-    <icon />
+    <icon>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsSAAALEgHS3X78AAAAwklEQVQ4jZWSuw2DMBRFD5GpieQF2CDeAG+S0HkjKLNJzAYeBKRQu0mBkQhgwK/y55777pOdiaZXgAUK0moEtAgwQJdooAArQufOG6lT6LwdLFDdErtuSiR0vDON67yRr/n8UoIF/ACeeTuoywYrGKD2Rrr5XuwIS0B7I10Efi8bLBOUQVgANm8HfQb/GYRYddgWwOcMXicgiOqVJgpvDHZMDmGI/IMAHYLRBKmViab/hrU7VG5LwTSCZnquKtFgBPQPKQdDFuvOlBUAAAAASUVORK5CYII=
+    </icon>
     <properties>
         <propertyGroup caption="General">
             <property key="termsBoolean" type="attribute">
