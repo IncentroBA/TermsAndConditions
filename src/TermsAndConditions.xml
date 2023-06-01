@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget
+    id="incentro.termsandconditions.TermsAndConditions"
+    pluginWidget="true"
+    needsEntityContext="true"
+    offlineCapable="true"
+    supportedPlatform="Web"
+    xmlns="http://www.mendix.com/widget/1.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd"
+>
+    <name>Terms And Conditions</name>
+    <description>A simple widget to display terms and conditions next to each other.</description>
+    <icon />
+    <properties>
+        <propertyGroup caption="General">
+            <property key="termsBoolean" type="attribute">
+                <caption>Terms check</caption>
+                <description>Checkbox to set agreed status on the terms and conditions.</description>
+                <attributeTypes>
+                    <attributeType name="Boolean" />
+                </attributeTypes>
+            </property>
+            <property key="labelTextBefore" type="textTemplate" required="false">
+                <caption>Label text</caption>
+                <description>Before the terms and conditions link.</description>
+                <translations>
+                    <translation lang="en_US">I agree with the</translation>
+                    <translation lang="nl_NL">Ik ga akkoord met de</translation>
+                </translations>
+            </property>
+            <property key="termsText" type="textTemplate" required="false">
+                <caption>terms text</caption>
+                <description>The terms and conditions text.</description>
+                <translations>
+                    <translation lang="en_US">terms and conditions</translation>
+                    <translation lang="nl_NL">algemene voorwaarden</translation>
+                </translations>
+            </property>
+            <property key="labelTextAfter" type="textTemplate" required="false">
+                <caption>Label text</caption>
+                <description>After the terms and conditions link.</description>
+                <translations>
+                    <translation lang="en_US" />
+                    <translation lang="nl_NL" />
+                </translations>
+            </property>
+            <property key="termsAction" type="action">
+                <caption>Terms action</caption>
+                <description>Clicking the terms and conditions link.</description>
+            </property>
+            <systemProperty key="Name" />
+            <systemProperty key="Editability" />
+            <systemProperty key="TabIndex" />
+        </propertyGroup>
+    </properties>
+</widget>

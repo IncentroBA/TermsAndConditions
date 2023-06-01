@@ -1,0 +1,15 @@
+.form-group.terms-and-conditions {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.form-group.terms-and-conditions label.control-label.terms-and-conditions__label {
+  margin-bottom: 0;
+}
+
+.form-group.terms-and-conditions label.control-label.terms-and-conditions__label a {
+  font-weight: bold;
+}
+
+.form-group.terms-and-conditions .terms-and-conditions__action:hover {cursor: pointer;}
