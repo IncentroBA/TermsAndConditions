@@ -1,7 +1,7 @@
 {
     "name": "termsandconditions",
     "widgetName": "TermsAndConditions",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A simple widget to display terms and conditions next to each other.",
     "copyright": "2023 Incentro",
     "author": "Rob Duits",

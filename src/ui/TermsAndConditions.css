@@ -1,4 +1,10 @@
+/* .form-group.terms-and-conditions, */
+
 .form-group.terms-and-conditions {
+  flex-direction: column;
+}
+
+.form-group.terms-and-conditions .terms-and-conditions__wrapper {
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -12,4 +18,6 @@
   font-weight: bold;
 }
 
-.form-group.terms-and-conditions .terms-and-conditions__action:hover {cursor: pointer;}
+.form-group.terms-and-conditions .terms-and-conditions__action:hover {
+  cursor: pointer;
+}

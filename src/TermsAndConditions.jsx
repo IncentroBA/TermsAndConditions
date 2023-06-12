@@ -10,7 +10,7 @@ export function TermsAndConditions({ labelTextBefore, labelTextAfter, termsActio
 
     useEffect(() => {
         if (termsBoolean.status === "available") {
-            setCurrentValue(currentValue || termsBoolean.value);
+            setCurrentValue(termsBoolean.value || currentValue);
 
             if (termsBoolean.readOnly === true) {
                 setDisabledValue(true);
@@ -32,21 +32,32 @@ export function TermsAndConditions({ labelTextBefore, labelTextAfter, termsActio
 
     if (canRender) {
         return (
-            <div className={`mx-checkbox form-group terms-and-conditions ${style}`}>
-                <input
-                    type="checkbox"
-                    id={id}
-                    onChange={onChangeInput}
-                    disabled={disabledValue}
-                    value={currentValue}
-                ></input>
-                <label className="control-label terms-and-conditions__label" htmlFor={id}>
-                    <span>{labelTextBefore?.value} </span>
-                    <a className="terms-and-conditions__action" onClick={onClickTerms}>
-                        {termsText?.value}
-                    </a>
-                    <span> {labelTextAfter?.value}</span>
-                </label>
+            <div
+                className={`mx-checkbox form-group terms-and-conditions ${style} ${
+                    termsBoolean.validation ? "has-error" : ""
+                }`}
+            >
+                <div className="terms-and-conditions__wrapper">
+                    <input
+                        type="checkbox"
+                        id={id}
+                        onChange={onChangeInput}
+                        disabled={disabledValue}
+                        checked={currentValue}
+                    ></input>
+                    <label className="control-label terms-and-conditions__label" htmlFor={id}>
+                        <span>{labelTextBefore?.value} </span>
+                        <a className="terms-and-conditions__action" onClick={onClickTerms}>
+                            {termsText?.value}
+                        </a>
+                        <span> {labelTextAfter?.value}</span>
+                    </label>
+                </div>
+                {termsBoolean.validation && (
+                    <div className="alert alert-danger mx-validation-message" role="alert">
+                        &nbsp;{termsBoolean.validation}
+                    </div>
+                )}
             </div>
         );
     } else return <div></div>;
